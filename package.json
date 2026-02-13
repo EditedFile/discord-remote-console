@@ -18,7 +18,7 @@
     "node": ">=18"
   },
   "author": "EditedFile",
-  "license": "MIT",
+  "license": "AGPL-3",
   "keywords": [
     "discord",
     "node-js",
