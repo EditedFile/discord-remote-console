@@ -29,6 +29,6 @@ export async function registerCommands(client) {
 
 		Logger("info", `LOADED/RELOADED ${data.length} SLASH COMMANDS.`);
 	} catch (error) {
-		Logger("error", `Error registering commands: ${error}`);
+		Logger("error", `ERROR WHILE REGISTERING COMMANDS: ${error}`);
 	}
 }

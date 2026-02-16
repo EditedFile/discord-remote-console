@@ -10,7 +10,7 @@ import { Logger } from "../utils/logger.js";
 const execPromise = promisify(exec);
 
 export const data = new SlashCommandBuilder()
-	.setName("new")
+	.setName("screen")
 	.setDescription("Create a new screen session with a Discord channel")
 	.addStringOption(option =>
 		option
@@ -181,7 +181,7 @@ export async function execute(interaction) {
 			embeds: [embed]
 		});
 	} catch (error) {
-		Logger("error", `Error in new command: ${error}`);
+		Logger("error", `Error in screen command: ${error}`);
 		const errorEmbed = new EmbedBuilder()
 			.setColor(0xED4245) // Red color
 			.setTitle("Command Error")
