@@ -59,6 +59,9 @@ in the main-terminal channel, type any linux command and the bot will execute it
 - `/exit session:name` - stop a screen session and delete its channel (note: session name is optional, it will exit the screen session of the current channel if found)
 - `/update` - sync discord channels with active/deleted screen sessions
 - `/unsetup` - remove all bot channels and category
+- `/download path:file` - download a file from the machine as a discord attachment (path is autocompleted, main-terminal only)
+- `/upload file:attachment path:destination` - upload a file attachment to the machine (path is optional and autocompleted, main-terminal only)
+- `/status` - show system status (cpu, memory, disk, uptime) (main-terminal only)
 
 ## screen sessions
 

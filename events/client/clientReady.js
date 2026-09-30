@@ -3,7 +3,7 @@ import { config } from "../../config.js";
 import { Logger } from "../../utils/logger.js";
 import { registerCommands } from "../../utils/registerCommands.js";
 
-export async function ready(client) {
+export async function clientReady(client) {
 	try {
 		Logger("ready", `LOGGED IN AS ${client.user?.tag} | (ID: ${client.user?.id})`);
 		
