@@ -10,7 +10,7 @@ import { Logger } from "../utils/logger.js";
 const execPromise = promisify(exec);
 
 export const data = new SlashCommandBuilder()
-	.setName("update")
+	.setName("sync")
 	.setDescription("Sync screen sessions - create new channels and remove old ones")
 	.setDefaultMemberPermissions(PermissionFlagsBits.Administrator);
 
@@ -146,7 +146,7 @@ export async function execute(interaction) {
 
 		const embed = new EmbedBuilder()
 			.setColor(config.color)
-			.setTitle("Update Complete")
+			.setTitle("Sync Complete")
 			.setDescription(
 				`Channels Created: \`${created}\`\n` +
 				`Channels Deleted: \`${deleted}\`\n` +
@@ -166,11 +166,11 @@ export async function execute(interaction) {
 			embeds: [embed]
 		});
 	} catch (error) {
-		Logger("error", `Error in update command: ${error}`);
+		Logger("error", `Error in sync command: ${error}`);
 		const errorEmbed = new EmbedBuilder()
 			.setColor(0xED4245) // Red color
-			.setTitle("Update Error")
-			.setDescription(`An error occurred during update:\n\`\`\`${error.message}\`\`\``)
+			.setTitle("Sync Error")
+			.setDescription(`An error occurred during sync:\n\`\`\`${error.message}\`\`\``)
 			.setFooter({
 				text: "discord-ssh",
 				iconURL: interaction.client.user.displayAvatarURL()
